@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Intern Portfolio - Dark Mode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0a0e27',
+                        'dark-card': '#151b3d',
+                        'dark-lighter': '#1e2749',
+                        'electric-blue': '#00d4ff',
+                        'emerald': '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4ff 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-100">
+    <!-- Sticky Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-dark-card/95 backdrop-blur-sm z-50 border-b border-electric-blue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold gradient-text">Portfolio</div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#home" class="hover:text-electric-blue transition-colors duration-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-electric-blue transition-colors duration-300">About</a></li>
+                    <li><a href="#skills" class="hover:text-electric-blue transition-colors duration-300">Skills</a></li>
+                    <li><a href="#techstack" class="hover:text-electric-blue transition-colors duration-300">Tech Stack</a></li>
+                    <li><a href="#github" class="hover:text-electric-blue transition-colors duration-300">Projects</a></li>
+                    <li><a href="#collaborative" class="hover:text-electric-blue transition-colors duration-300">Collaborations</a></li>
+                    <li><a href="#contact" class="hover:text-electric-blue transition-colors duration-300">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-100 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-3">
+                    <li><a href="#home" class="block hover:text-electric-blue transition-colors duration-300">Home</a></li>
+                    <li><a href="#about" class="block hover:text-electric-blue transition-colors duration-300">About</a></li>
+                    <li><a href="#skills" class="block hover:text-electric-blue transition-colors duration-300">Skills</a></li>
+                    <li><a href="#techstack" class="block hover:text-electric-blue transition-colors duration-300">Tech Stack</a></li>
+                    <li><a href="#github" class="block hover:text-electric-blue transition-colors duration-300">Projects</a></li>
+                    <li><a href="#collaborative" class="block hover:text-electric-blue transition-colors duration-300">Collaborations</a></li>
+                    <li><a href="#contact" class="block hover:text-electric-blue transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-6">
+                <span class="text-emerald text-lg font-medium">Welcome to my Portfolio</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Hello! I'm <span class="gradient-text">Clarence Villas</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">
+                <span class="text-electric-blue">Full Stack Web Developer</span>
+            </h2>
+            <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+                Building innovative solutions with modern technologies. 
+                Passionate about creating impactful applications and continuous learning.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#github" class="px-8 py-3 bg-electric-blue text-dark-bg font-semibold rounded-lg hover:bg-electric-blue/90 transition-all duration-300 glow-effect">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-8 py-3 border-2 border-emerald text-emerald font-semibold rounded-lg hover:bg-emerald hover:text-dark-bg transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                About <span class="gradient-text">Me</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-electric-blue to-emerald mx-auto mb-12"></div>
+            
+            <div class="bg-dark-card rounded-2xl p-8 md:p-12 border border-electric-blue/20">
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    I'm an IT student passionate about <span class="text-electric-blue font-semibold">[Cybersecurity/Web Development/Network Administration]</span> and eager to learn and grow in the technology field.
+                </p>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Through my OJT experience, I'm gaining hands-on knowledge in real-world IT environments, developing both technical expertise and professional skills that will shape my career in technology.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    I believe in continuous learning, problem-solving, and staying updated with the latest industry trends and best practices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-dark-lighter">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                My <span class="gradient-text">Skills</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-electric-blue to-emerald mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-dark-card rounded-2xl p-8 border border-electric-blue/20">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-code text-electric-blue mr-3"></i>
+                        Technical Skills
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">HTML/CSS/JavaScript</span>
+                                <span class="text-electric-blue">75%</span>
+                            </div>
+                            <div class="w-full bg-dark-lighter rounded-full h-3">
+                                <div class="bg-gradient-to-r from-electric-blue to-emerald h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Python</span>
+                                <span class="text-electric-blue">65%</span>
+                            </div>
+                            <div class="w-full bg-dark-lighter rounded-full h-3">
+                                <div class="bg-gradient-to-r from-electric-blue to-emerald h-3 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Network Fundamentals</span>
+                                <span class="text-electric-blue">70%</span>
+                            </div>
+                            <div class="w-full bg-dark-lighter rounded-full h-3">
+                                <div class="bg-gradient-to-r from-electric-blue to-emerald h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Database Management</span>
+                                <span class="text-electric-blue">60%</span>
+                            </div>
+                            <div class="w-full bg-dark-lighter rounded-full h-3">
+                                <div class="bg-gradient-to-r from-electric-blue to-emerald h-3 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Cybersecurity Basics</span>
+                                <span class="text-electric-blue">55%</span>
+                            </div>
+                            <div class="w-full bg-dark-lighter rounded-full h-3">
+                                <div class="bg-gradient-to-r from-electric-blue to-emerald h-3 rounded-full" style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-dark-card rounded-2xl p-8 border border-emerald/20">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-users text-emerald mr-3"></i>
+                        Soft Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-full text-sm">Problem Solving</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-full text-sm">Team Collaboration</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-full text-sm">Communication</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-full text-sm">Time Management</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-full text-sm">Adaptability</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-full text-sm">Critical Thinking</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-full text-sm">Attention to Detail</span>
+                        <span class="px-4 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-full text-sm">Quick Learner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="techstack" class="py-20 px-4 bg-dark-bg">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                Tech <span class="gradient-text">Stack</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+                Technologies and tools I work with to build amazing projects.
+            </p>
+            <div class="w-20 h-1 bg-gradient-to-r from-electric-blue to-emerald mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                <!-- Frontend -->
+                <div class="bg-dark-card rounded-2xl p-6 border border-electric-blue/20">
+                    <div class="w-12 h-12 bg-electric-blue/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-electric-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-100">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-html5"></i> HTML5
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-css3-alt"></i> CSS3
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            SCSS
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-js"></i> JavaScript
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            TypeScript
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            Tailwind CSS
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Backend & Database -->
+                <div class="bg-dark-card rounded-2xl p-6 border border-emerald/20">
+                    <div class="w-12 h-12 bg-emerald/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-emerald text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-100">Backend & Database</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-php"></i> PHP
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-laravel"></i> Laravel
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm">
+                            MySQL
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm">
+                            Blade
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Mobile & Other Languages -->
+                <div class="bg-dark-card rounded-2xl p-6 border border-electric-blue/20">
+                    <div class="w-12 h-12 bg-electric-blue/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-electric-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-100">Mobile & Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-android"></i> Kotlin
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            Dart
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            C++
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            C
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-swift"></i> Swift
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-electric-blue/30 text-electric-blue rounded-lg text-sm">
+                            COBOL
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="bg-dark-card rounded-2xl p-6 border border-emerald/20">
+                    <div class="w-12 h-12 bg-emerald/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-emerald text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-100">Tools & Others</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-git-alt"></i> Git
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm flex items-center gap-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm flex items-center gap-2">
+                            <i class="fas fa-code"></i> VS Code
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm">
+                            Composer
+                        </span>
+                        <span class="px-3 py-2 bg-dark-lighter border border-emerald/30 text-emerald rounded-lg text-sm">
+                            CMake
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="github" class="py-20 px-4 bg-dark-lighter">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                My GitHub <span class="gradient-text">Projects</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+                Here are some of my recent projects and repositories. Each project showcases different technologies and skills I've been working on.
+            </p>
+            <div class="w-20 h-1 bg-gradient-to-r from-electric-blue to-emerald mx-auto mb-12"></div>
+            
+            <div id="github-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <p class="text-gray-400 text-center col-span-full">Loading projects...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborative Projects Section -->
+    <section id="collaborative" class="py-20 px-4 bg-dark-bg">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                Collaborative <span class="gradient-text">Projects</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+                Team projects I've contributed to, working alongside talented developers.
+            </p>
+            <div class="w-20 h-1 bg-gradient-to-r from-electric-blue to-emerald mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- EDUSYNC Project -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-emerald/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-emerald/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-emerald text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-electric-blue text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        EDUSYNC DayOnes
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                        Flutter mobile app for students and faculty to manage class schedules with Google Calendar integration, local storage, and multi-alert reminders. 
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>Day-Ones Team</span>
+                    </div>
+                    
+                    <a href="https://github.com/Day-Ones/EDUSYNC-DayOnes" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-emerald hover:bg-emerald/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- 4 Seasons Project -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-electric-blue/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-electric-blue/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-electric-blue text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-emerald text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        4 Seasons
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                       The PDMHS Student Medical System is a capstone project designed to modernize and streamline the management of student medical information.
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>Hannah Lorainne Genandoy</span>
+                    </div>
+                    
+                    <a href="https://github.com/genandoy-hannahlorainne/4seasons" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-electric-blue hover:bg-electric-blue/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- PDMHS Clinic Project -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-emerald/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-emerald/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-emerald text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-electric-blue text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        PDMHS Clinic Management
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                       A secure and comprehensive medical management system built for President Diosdado Macapagal High School (PDMHS). 
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>Jasmine Robelle De Leon</span>
+                    </div>
+                    
+                    <a href="https://github.com/deleon-jasminerobelle/PDMHS_CLINIC-M" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-emerald hover:bg-emerald/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Club Organization Project -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-electric-blue/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-electric-blue/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-electric-blue text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-emerald text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        Club Organization Integration
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                        Integrated platform for managing school clubs and student organizations.
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>Jasmine Robelle De Leon</span>
+                    </div>
+                    
+                    <a href="https://github.com/deleon-jasminerobelle/club_organization_integ" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-electric-blue hover:bg-electric-blue/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- OOP Eventure Project -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-emerald/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-emerald/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-emerald text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-electric-blue text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        OOP Eventure
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                        Object-oriented programming project for event management and planning.
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>Hannah Lorainne Genandoy</span>
+                    </div>
+                    
+                    <a href="https://github.com/genandoy-hannahlorainne/OOP_Eventure" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-emerald hover:bg-emerald/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Infoman Partnership App -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-electric-blue/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-electric-blue/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-electric-blue text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-emerald text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        Infoman Partnership App
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                        This system enables administrators to track partnership details, manage organization data, and ensure efficient communication between stakeholders.
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>My Repository</span>
+                    </div>
+                    
+                    <a href="https://github.com/villas-clarence/Infoman_partnership_app" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-electric-blue hover:bg-electric-blue/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- File Handling Project -->
+                <div class="bg-dark-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-emerald/20 hover-glow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-emerald/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-emerald text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-dark-lighter text-electric-blue text-xs rounded-full font-semibold">Team Project</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">
+                        File Handling System
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4 min-h-[40px]">
+                        File management and handling system with advanced operations and features.
+                    </p>
+                    
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-user-friends mr-2"></i>
+                        <span>Angelica Joy Uy</span>
+                    </div>
+                    
+                    <a href="https://github.com/uy-angelicajoy/File-Handling" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-emerald hover:bg-emerald/90 text-dark-bg text-sm py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                        View Repo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-dark-lighter">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                Get In <span class="gradient-text">Touch</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-electric-blue to-emerald mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="bg-dark-card rounded-2xl p-8 border border-electric-blue/20">
+                    <h3 class="text-2xl font-bold mb-4">Let's Connect</h3>
+                    <p class="text-gray-400 mb-8">
+                        I'm always open to discussing new opportunities, collaborations, or just connecting with fellow IT enthusiasts.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="https://www.linkedin.com/in/clarence-villas-02220b347/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-electric-blue transition-colors duration-300"></a>
+                            <i class="fab fa-linkedin text-2xl w-10"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/villas-clarence" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-emerald transition-colors duration-300">
+                            <i class="fab fa-github text-2xl w-10"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:villasclarence2004@gmail.com" class="flex items-center text-gray-300 hover:text-electric-blue transition-colors duration-300">
+                            <i class="fas fa-envelope text-2xl w-10"></i>
+                            <span>villasclarence2004@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="bg-dark-card rounded-2xl p-8 border border-emerald/20">
+                    <div class="mb-6">
+                        <input type="text" id="name" placeholder="Your Name" required
+                            class="w-full px-4 py-3 bg-dark-lighter border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:border-electric-blue transition-colors duration-300">
+                    </div>
+                    <div class="mb-6">
+                        <input type="email" id="email" placeholder="Your Email" required
+                            class="w-full px-4 py-3 bg-dark-lighter border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:border-electric-blue transition-colors duration-300">
+                    </div>
+                    <div class="mb-6">
+                        <textarea id="message" rows="5" placeholder="Your Message" required
+                            class="w-full px-4 py-3 bg-dark-lighter border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:border-electric-blue transition-colors duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-electric-blue to-emerald text-dark-bg font-semibold rounded-lg hover:opacity-90 transition-all duration-300 glow-effect">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-card border-t border-electric-blue/20 py-8 text-center">
+        <p class="text-gray-400">&copy; 2026 <span class="text-electric-blue">Clarence Villas</span>. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
